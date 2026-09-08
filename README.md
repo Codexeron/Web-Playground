@@ -21,9 +21,17 @@ HTML, CSS ve JavaScript dosyalarını düzenleyin, sonuçları anında görün, 
 - ⌨️ **Klavye Kısayolları** – `Ctrl+S` kaydet, `Ctrl+Enter` yeni sekmede önizleme.
 - 🔗 **Ayrı Sekmede Önizleme** – `preview.html` ile bağımsız bir önizleme penceresi.
 
-## 📸 Ekran Görüntüsü
+Proje klasörüne gidin:
+cd web-playground
 
-*(Projeye ait bir ekran görüntüsü eklemeyi unutmayın!)*
+Dosya Yapısı;
+web-playground/
+├── index.html          # Ana uygulama sayfası
+├── preview.html        # Ayrı sekmede önizleme sayfası
+├── css/
+│   └── style.css       # Tüm stiller ve tema tanımları
+└── js/
+    └── app.js          # Tüm JavaScript mantığı
 
 ## 🚀 Hızlı Başlangıç (Kurulum)
 
