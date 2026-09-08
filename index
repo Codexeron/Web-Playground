@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">â—ˆ WEB PLAYGROUND</div>
+        <div class="header-actions">
+            <span id="autoSaveStatus">Auto Save â—</span>
+            <select id="themeSelector">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="dracula">Dracula</option>
+                <option value="monokai">Monokai</option>
+                <option value="solarized">Solarized</option>
+                <option value="codexeron" selected>Codexeron</option>
+            </select>
+            <button id="previewBtn">Yeni Sekmede AÃ§</button>
+            <button id="inspectToggle">ğŸ” Picker</button>
+            <button id="fullscreenBtn">â›¶</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sol: Dosya AÄŸacÄ± + EditÃ¶r -->
+        <div class="editor-panel">
+            <div class="file-tree">
+                <div class="file-tree-header">
+                    <span>ğŸ“ Dosyalar</span>
+                    <button id="addFileBtn" title="Yeni Dosya">+</button>
+                </div>
+                <div class="file-tree-list" id="fileTreeList"></div>
+            </div>
+            <div class="editor-area">
+                <div class="tabs" id="fileTabs"></div>
+                <div class="editor-container">
+                    <div class="editor-wrapper" id="activeEditor">
+                        <div class="line-numbers"></div>
+                        <textarea id="codeEditor" spellcheck="false"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SaÄŸ: Preview + Paneller -->
+        <div class="preview-panel">
+            <div class="preview-toolbar">
+                <span>Ã–nizleme</span>
+                <div class="preview-actions">
+                    <button id="desktopBtn" title="Desktop">ğŸ–¥ï¸</button>
+                    <button id="tabletBtn" title="Tablet">ğŸ“±</button>
+                    <button id="mobileBtn" title="Mobile">ğŸ“²</button>
+                    <button id="refreshPreviewBtn">â†»</button>
+                    <button id="pickerCopyBtn" style="display:none;">ğŸ“‹ Kopyala</button>
+                </div>
+            </div>
+            <div class="preview-container">
+                <iframe id="previewFrame" sandbox="allow-scripts allow-modals allow-same-origin"></iframe>
+            </div>
+
+            <div class="bottom-panels">
+                <div class="panel-tabs">
+                    <button class="panel-tab active" data-panel="console">Console</button>
+                    <button class="panel-tab" data-panel="network">Network</button>
+                    <button class="panel-tab" data-panel="performance">Performance</button>
+                    <button class="panel-tab" data-panel="picker">Picker</button>
+                </div>
+                <div class="panel-content" id="consolePanel"><div id="consoleOutput"></div></div>
+                <div class="panel-content" id="networkPanel" style="display:none;"><div id="networkOutput"></div></div>
+                <div class="panel-content" id="performancePanel" style="display:none;"><div id="performanceOutput"></div></div>
+                <div class="panel-content" id="pickerPanel" style="display:none;"><div id="pickerOutput"><div class="picker-info">Bir Ã¶ÄŸe seÃ§mek iÃ§in Ã¶nizlemede tÄ±klayÄ±n.</div></div></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="action-bar">
+        <div class="left-actions">
+            <button id="newTabBtn">Yeni Sekmede AÃ§</button>
+            <button id="clearBtn">Temizle</button>
+            <button id="copyBtn">Kodu Kopyala</button>
+            <button id="downloadBtn">Download HTML</button>
+        </div>
+        <div class="right-actions">
+            <span id="statusBar">Ready</span>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
