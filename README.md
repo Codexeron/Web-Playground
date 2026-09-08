@@ -32,7 +32,6 @@ web-playground/
 │   └── style.css       # Tüm stiller ve tema tanımları
 └── js/
     └── app.js          # Tüm JavaScript mantığı
-
 ## 🚀 Hızlı Başlangıç (Kurulum)
 
 1.  Bu repoyu klonlayın veya zip olarak indirin:
